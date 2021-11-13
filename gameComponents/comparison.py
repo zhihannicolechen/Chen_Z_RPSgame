@@ -1,3 +1,4 @@
+import colorama
 from gameComponents import gameVars
 
 def comparison():
@@ -5,24 +6,25 @@ def comparison():
         # tie - nothing else to compare, so it'll exit
         print("tie! try again")
 
-    elif gameVars.player == "rock":
-        if gameVars.computer == "paper":
+    elif gameVars.player == "hammer":
+        if gameVars.computer == "Shield":
+            print("you lose!")
+            gameVars.playerLives = gameVars.playerLives - 1
+
+        else:
+            print("you win!")
+            gameVars.computerLives = gameVars.computerLives - 1
+
+    elif gameVars.player == "Shield":
+        if gameVars.computer == "sword":
             print("you lose!")
             gameVars.playerLives = gameVars.playerLives - 1
         else:
             print("you win!")
             gameVars.computerLives = gameVars.computerLives - 1
 
-    elif gameVars.player == "paper":
-        if gameVars.computer == "scissors":
-            print("you lose!")
-            gameVars.playerLives = gameVars.playerLives - 1
-        else:
-            print("you win!")
-            gameVars.computerLives = gameVars.computerLives - 1
-
-    elif gameVars.player == "scissors":
-        if gameVars.computer == "rock":
+    elif gameVars.player == "sword":
+        if gameVars.computer == "hammer":
             print("you lose!")
             gameVars.playerLives = gameVars.playerLives - 1
     else:

@@ -1,4 +1,4 @@
-choices = ["rock", "paper", "scissors"]
+choices = ["hammer", "shield", "sword"]
 
 # player will be the weapon the player chooses via input
 
